@@ -1,0 +1,415 @@
+/* Prompts Hero Section */
+.prompts-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+    padding: 6rem 5% 4rem;
+    text-align: center;
+    color: white;
+}
+
+.prompts-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.prompts-hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Filter Section */
+.filter-section {
+    background: white;
+    padding: 2rem 5%;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.filter-container-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.filter-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4b5563;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: #f3f4f6;
+    color: #4b5563;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+}
+
+.filter-btn:hover {
+    background: #e5e7eb;
+}
+
+.filter-btn.active {
+    background: #1e40af;
+    color: white;
+}
+
+/* Prompts Section */
+.prompts-section {
+    padding: 3rem 5% 5rem;
+    background: #f9fafb;
+}
+
+.prompts-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto 2rem;
+}
+
+.prompts-count {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.prompts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.prompt-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.prompt-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.prompt-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.prompt-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prompt-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background: #1e40af;
+    color: white;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.prompt-badge.midjourney {
+    background: #8b5cf6;
+}
+
+.prompt-badge.dall-e {
+    background: #059669;
+}
+
+.prompt-badge.stable-diffusion {
+    background: #0891b2;
+}
+
+.prompt-badge.writing {
+    background: #dc2626;
+}
+
+.prompt-badge.business {
+    background: #f59e0b;
+}
+
+.prompt-content {
+    padding: 1.5rem;
+}
+
+.prompt-content h3 {
+    font-size: 1.3rem;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.prompt-content p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.prompt-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.tag {
+    padding: 0.3rem 0.75rem;
+    background: #f3f4f6;
+    color: #6b7280;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.prompt-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #f3f4f6;
+}
+
+.prompt-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.star {
+    font-size: 1rem;
+}
+
+.sales {
+    color: #9ca3af;
+}
+
+.prompt-price-buy {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e40af;
+}
+
+.buy-btn {
+    padding: 0.75rem 1.5rem;
+    background: #1e40af;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.buy-btn:hover {
+    background: #1e3a8a;
+}
+
+/* Why Buy Section */
+.why-buy-section {
+    padding: 5rem 5%;
+    background: white;
+}
+
+.why-buy-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.why-buy-content h2 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.why-buy-content p {
+    font-size: 1.15rem;
+    color: #6b7280;
+    margin-bottom: 4rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.benefit-card {
+    text-align: center;
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: #dbeafe;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: #1e40af;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.benefit-card p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Seller CTA Section */
+.seller-cta {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%);
+    padding: 5rem 5%;
+    text-align: center;
+    color: white;
+}
+
+.seller-cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.seller-cta-content p {
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+}
+
+.seller-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-primary-white {
+    background: white;
+    color: #1e40af;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.btn-primary-white:hover {
+    transform: translateY(-2px);
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid white;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Hidden cards for filtering */
+.prompt-card.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .prompts-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .prompts-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .why-buy-content h2,
+    .seller-cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prompts-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .prompts-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .prompts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .seller-cta-buttons {
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .filter-buttons {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}

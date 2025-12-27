@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompts Marketplace - PrimexOne</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="prompts.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">PrimexOne</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#ai">AI</a></li>
+            <li><a href="#software">Software</a></li>
+            <li><a href="prompts.html">Prompts</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html" class="get-started-btn">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="prompts-hero">
+        <div class="prompts-hero-content">
+            <h1>Premium AI Prompts Marketplace</h1>
+            <p>Discover high-quality prompts for ChatGPT, Midjourney, DALL-E, and more. Save time and get better results with professionally crafted prompts.</p>
+            <div class="search-box">
+                <svg class="search-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search prompts..." onkeyup="filterPrompts()">
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container-wrapper">
+            <div class="filter-header">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                </svg>
+                Filter by Category:
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterByCategory('all')">All</button>
+                <button class="filter-btn" onclick="filterByCategory('chatgpt')">ChatGPT</button>
+                <button class="filter-btn" onclick="filterByCategory('midjourney')">Midjourney</button>
+                <button class="filter-btn" onclick="filterByCategory('dall-e')">DALL-E</button>
+                <button class="filter-btn" onclick="filterByCategory('stable-diffusion')">Stable Diffusion</button>
+                <button class="filter-btn" onclick="filterByCategory('writing')">Writing</button>
+                <button class="filter-btn" onclick="filterByCategory('business')">Business</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prompts Grid -->
+    <section class="prompts-section">
+        <div class="prompts-controls">
+            <p class="prompts-count">Showing <span id="promptCount">9</span> prompts</p>
+            <div class="sort-control">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 6h18M7 12h10M11 18h2"/>
+                </svg>
+                Sort by: <strong>Popular</strong>
+            </div>
+        </div>
+
+        <div class="prompts-grid" id="promptsGrid">
+            <!-- ChatGPT Prompts -->
+            <div class="prompt-card" data-category="chatgpt">
+                <div class="prompt-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Marketing Dashboard">
+                    <span class="prompt-badge">ChatGPT</span>
+                </div>
+                <div class="prompt-content">
+                    <h3>Advanced ChatGPT Marketing Assistant</h3>
+                    <p>Complete marketing strategy generator for social media, email campaigns, and content...</p>
+                    <div class="prompt-tags">
+                        <span class="tag">Marketing</span>
+                        <span class="tag">Social Media</span>
+                        <span class="tag">Content</span>
+                    </div>
+                    <div class="prompt-footer">
+                        <div class="prompt-rating">
+                            <span class="star">⭐</span>
+                            <span>4.8</span>
+                            <span class="sales">342 sales</span>
+                        </div>
+                        <div class="prompt-price-buy">
+                            <span class="price">$4.99</span>
+                            <button class="buy-btn">🛒 Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Midjourney Prompts -->
+            <div class="prompt-card" data-category="midjourney">
+                <div class="prompt-image">
+                    <img src="https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?w=600&h=400&fit=crop" alt="Design Tools">
+                    <span class="prompt-badge midjourney">Midjourney</span>
+                </div>
+                <div class="prompt-content">
+                    <h3>Professional Logo Design - Midjourney</h3>
+                    <p>Create stunning, professional logos for any business. Includes variations for different...</p>
+                    <div class="prompt-tags">
+                        <span class="tag">Logo</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">Design</span>
+                    </div>
+                    <div class="prompt-footer">
+                        <div class="prompt-rating">
+                            <span class="star">⭐</span>
+                            <span>4.9</span>
+                            <span class="sales">521 sales</span>
+                        </div>
+                        <div class="prompt-price-buy">
+                            <span class="price">$6.99</span>
+                            <button class="buy-btn">🛒 Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Writing Prompts -->
+            <div class="prompt-card" data-category="writing">
+                <div class="prompt-image">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop" alt="Writing">
+                    <span class="prompt-badge writing">Writing</span>
+                </div>
+                <div class="prompt-content">
+                    <h3>Blog Post Writer Pro</h3>
+                    <p>Generate SEO-optimized, engaging blog posts on any topic. Includes outline creation,...</p>
+                    <div class="prompt-tags">
+                        <span class="tag">SEO</span>
+                        <span class="tag">Blogging</span>
+                        <span class="tag">Content</span>
+                    </div>
+                    <div class="prompt-footer">
+                        <div class="prompt-rating">
+                            <span class="star">⭐</span>
+                            <span>4.7</span>
+                            <span class="sales">289 sales</span>
+                        </div>
+                        <div class="prompt-price-buy">
+                            <span class="price">$3.99</span>
+                            <button class="buy-btn">🛒 Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DALL-E Prompts -->
+            <div class="prompt-card" data-category="dall-e">
+                <div class="prompt-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Portrait">
+                    <span class="prompt-badge dall-e">DALL-E</span>
+                </div>
+                <div class="prompt-content">
+                    <h3>Realistic Portrait Generator - DALL-E</h3>
+                    <p>Create photorealistic portraits with specific emotions, lighting, and backgrounds. Perfect...</p>
+                    <div class="prompt-tags">
+                        <span class="tag">Portrait</span>
+                        <span class="tag">Realistic</span>
+                        <span class="tag">Character</span>
+                    </div>
+                    <div class="prompt-footer">
+                        <div class="prompt-rating">
+                            <span class="star">⭐</span>
+                            <span>4.6</span>
+                            <span class="sales">198 sales</span>
+                        </div>
+                        <div class="prompt-price-buy">
+                            <span class="price">$5.99</span>
+                            <button class="buy-btn">🛒 Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Prompts -->
+            <div class="prompt-card" data-category="business">
+                <div class="prompt-image">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop" alt="Business">
+                    <span class="prompt-badge business">Business</span>
+                </div>
+                <div class="prompt-content">
+                    <h3>Business Plan Generator</h3>
+                    <p>Comprehensive business plan creator including market analysis, financial projections, and...</p>
+                    <div class="prompt-tags">
+                        <span class="tag">Business</span>
+                        <span class="tag">Planning</span>
+                        <span class="tag">Strategy</span>
+                    </div>
+                    <div class="prompt-footer">
+                        <div class="prompt-rating">
+                            <span class="star">⭐</span>
+                            <span>4.9</span>
+                            <span class="sales">456 sales</span>
+                        </div>
+                        <div class="prompt-price-buy">
+                            <span class="price">$7.99</span>
+                            <button class="buy-btn">🛒 Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stable Diffusion Prompts -->
+            <div class="prompt-card" data-category="stable-diffusion">
+                <div class="prompt-image">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop" alt="Landscape">
+                    <span class="prompt-badge stable-diffusion">Stable Diffusion</span>
+                </div>
+                <div class="prompt-content">
+                    <h3>Artistic Landscape - Stable Diffusion</h3>
+                    <p>Generate breathtaking landscapes in various artistic styles. From photorealistic to...</p>
+                    <div class="prompt-tags">
+                        <span class="tag">Landscape</span>
+                        <span class="tag">Art</span>
+                        <span class="tag">Environment</span>
+                    </div>
+                    <div class="prompt-footer">
+                        <div class="prompt-rating">
+                            <span class="star">⭐</span>
+                            <span>4.8</span>
+                            <span class="sales">367 sales</span>
+                        </div>
+                        <div class="prompt-price-buy">
+                            <span class="price">$4.99</span>
+                            <button class="buy-btn">🛒 Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More ChatGPT -->
+            <div class="prompt-card" data-category="chatgpt">
+                <div class="prompt-image">
+                    <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=600&h=400&fit=crop" alt="Code">
+                    <span class="prompt-badge">ChatGPT</span>
+                </div>
+                <div class="prompt-content">
+                    <h3>Code Review Assistant</h3>
+                    <p>Comprehensive code reviewer that checks for bugs, suggests improvements, and explains...</p>
+                    <div class="prompt-tags">
+                        <span class="tag">Coding</span>
+                        <span class="tag">Development</span>
+                        <span class="tag">Review</span>
+                    </div>
+                    <div class="prompt-footer">
+                        <div class="prompt-rating">
+                            <span class="star">⭐</span>
+                            <span>4.9</span>
+                            <span class="sales">612 sales</span>
+                        </div>
+                        <div class="prompt-price-buy">
+                            <span class="price">$5.99</span>
+                            <button class="buy-btn">🛒 Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Writing -->
+            <div class="prompt-card" data-category="writing">
+                <div class="prompt-image">
+                    <img src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=600&h=400&fit=crop" alt="Email">
+                    <span class="prompt-badge writing">Writing</span>
+                </div>
+                <div class="prompt-content">
+                    <h3>Email Campaign Creator</h3>
+                    <p>Professional email sequences for any purpose. Includes subject lines, body copy, and CTAs...</p>
+                    <div class="prompt-tags">
+                        <span class="tag">Email</span>
+                        <span class="tag">Marketing</span>
+                        <span class="tag">Sales</span>
+                    </div>
+                    <div class="prompt-footer">
+                        <div class="prompt-rating">
+                            <span class="star">⭐</span>
+                            <span>4.8</span>
+                            <span class="sales">423 sales</span>
+                        </div>
+                        <div class="prompt-price-buy">
+                            <span class="price">$4.99</span>
+                            <button class="buy-btn">🛒 Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Midjourney -->
+            <div class="prompt-card" data-category="midjourney">
+                <div class="prompt-image">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop" alt="Abstract">
+                    <span class="prompt-badge midjourney">Midjourney</span>
+                </div>
+                <div class="prompt-content">
+                    <h3>Abstract Art Collection</h3>
+                    <p>Create unique abstract artworks perfect for prints, NFTs, or digital art. Multiple styles...</p>
+                    <div class="prompt-tags">
+                        <span class="tag">Abstract</span>
+                        <span class="tag">Art</span>
+                        <span class="tag">Creative</span>
+                    </div>
+                    <div class="prompt-footer">
+                        <div class="prompt-rating">
+                            <span class="star">⭐</span>
+                            <span>4.7</span>
+                            <span class="sales">334 sales</span>
+                        </div>
+                        <div class="prompt-price-buy">
+                            <span class="price">$5.99</span>
+                            <button class="buy-btn">🛒 Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Buy Section -->
+    <section class="why-buy-section">
+        <div class="why-buy-content">
+            <h2>Why Buy Prompts from PrimexOne?</h2>
+            <p>Quality-tested prompts that deliver real results</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>Every prompt is tested and optimized for best results</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="20" x2="12" y2="10"/>
+                            <line x1="18" y1="20" x2="18" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="16"/>
+                        </svg>
+                    </div>
+                    <h3>Instant Access</h3>
+                    <p>Download and start using your prompts immediately</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Money-Back Guarantee</h3>
+                    <p>30-day refund if you're not completely satisfied</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="seller-cta">
+        <div class="seller-cta-content">
+            <h2>Start Selling Your Prompts</h2>
+            <p>Join our marketplace and earn money by sharing your best AI prompts with the community</p>
+            <div class="seller-cta-buttons">
+                <a href="#seller" class="btn-primary-white">Become a Seller</a>
+                <a href="#learn" class="btn-outline-white">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>PrimexOne</h3>
+                <p>Building the future of digital technology through innovation and education.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#github" class="social-icon" aria-label="GitHub">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="#linkedin" class="social-icon" aria-label="LinkedIn">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="#twitter" class="social-icon" aria-label="Twitter">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 PrimexOne. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="prompts.js"></script>
+</body>
+</html>
